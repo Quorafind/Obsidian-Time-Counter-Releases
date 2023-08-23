@@ -1,0 +1,151 @@
+.cm-time-counter-icon .clickable-icon.setting-editor-extra-setting-button {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 0;
+}
+
+.cm-time-counter-gutter .cm-gutterElement, .cm-time-counter-gutter-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span.cm-time-counter-play-button {
+    margin-left: -44px;
+    padding-right: 22px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-40%);
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .1s ease-in-out;
+}
+
+/*.cm-active span.cm-time-counter-play-button, span.cm-time-counter-play-button .cm-play-button-end {*/
+/*    opacity: 0.7;*/
+/*}*/
+
+.cm-line:has(span.cm-time-counter-play-button):hover span.cm-time-counter-play-button {
+    opacity: 0.7;
+}
+
+.cm-line:has(span.cm-play-button-end) span.cm-time-counter-play-button {
+    opacity: 1;
+}
+
+.cm-contentContainer:has(.cm-time-counter-play-button) .cm-gutters {
+    padding-inline-end: calc(var(--file-folding-offset) * 2);
+}
+
+span.cm-time-mark-icon {
+    position: absolute;
+    opacity: 0.3;
+    transition: opacity .1s ease-in;
+    top: 0;
+    z-index: 99;
+    user-select: none;
+    cursor: pointer;
+}
+
+.cm-line:has(span.cm-time-mark-icon):hover span.cm-time-mark-icon {
+    opacity: 1;
+}
+
+.cm-active span.cm-time-mark-icon {
+    opacity: 1;
+}
+
+.cm-time-mark-icon:has(~ .cm-time-mark-icon) {
+    margin-top: 1.4rem;
+}
+
+.cm-time-mark-icon:has(~ .cm-time-mark-icon) :is(.time-mark-days, .time-mark-hours, .time-mark-minutes, .time-mark-seconds):hover {
+    color: var(--color-blue);
+}
+
+:is(.time-mark-days, .time-mark-hours, .time-mark-minutes, .time-mark-seconds) {
+    color: var(--text-faint);
+    transition: color .1s ease-in;
+}
+
+:is(.time-mark-days, .time-mark-hours, .time-mark-minutes, .time-mark-seconds):hover {
+    color: var(--color-red);
+}
+
+.cm-line:has(.cm-time-mark-icon):hover {
+    background: var(--background-secondary);
+}
+
+.view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller:has(.cm-time-counter-play-button) {
+    padding-left: calc(var(--file-margins) + 20px);
+}
+
+.cm-time-mark-icon {
+    left: var(--file-line-width);
+}
+
+.markdown-preview-view .cm-time-mark-icon {
+    opacity: 1;
+}
+
+.markdown-preview-view p:has(.cm-time-mark-icon), .markdown-preview-view li:has(.cm-time-mark-icon), .markdown-preview-view h1:has(.cm-time-mark-icon), .markdown-preview-view h2:has(.cm-time-mark-icon), .markdown-preview-view h3:has(.cm-time-mark-icon), .markdown-preview-view h4:has(.cm-time-mark-icon), .markdown-preview-view h5:has(.cm-time-mark-icon), .markdown-preview-view h6:has(.cm-time-mark-icon) {
+    position: relative;
+}
+
+.markdown-preview-view .tasks-list-text + .cm-time-mark-icon, .markdown-preview-view .task-list-item > .cm-time-mark-icon, .markdown-preview-view li > .cm-time-mark-icon {
+    margin-left: calc(var(--list-indent) * -1);
+}
+
+.markdown-preview-view blockquote .cm-time-mark-icon {
+    margin-left: calc((var(--size-4-6) + var(--blockquote-border-thickness)) * -1);
+}
+
+.search-result-file-match ul:has(.cm-time-mark-icon) > li.task-list-item[data-task="x"], ul:has(.cm-time-mark-icon) > li.task-list-item[data-task="X"] {
+    text-decoration: none;
+}
+
+.search-result-file-match ul:has(.cm-time-mark-icon) > li.task-list-item[data-task="x"] .cm-time-mark-icon, ul:has(.cm-time-mark-icon) > li.task-list-item[data-task="X"] .cm-time-mark-icon {
+    opacity: 1;
+    filter: opacity(100);
+}
+
+.search-result-file-match .cm-time-mark-icon {
+    position: relative;
+    left: unset;
+    margin-left: var(--size-4-2);
+    text-decoration: unset;
+}
+
+.time-mark-ask-modal div, .time-mark-notice-modal .time-counter-modal-title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.time-mark-ask-modal button, .time-mark-notice-modal button {
+    width: 7rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.time-mark-ask-modal input {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.time-mark-ask-modal .button-container, .time-mark-notice-modal .button-container {
+    padding-bottom: 1rem;
+}
+
+.time-mark-notice-modal .time-counter-notice {
+    font-size: 12px;
+    margin-top: var(--size-4-2);
+    margin-left: var(--size-4-2);
+    margin-right: var(--size-4-2);
+}
+
+.time-counter-desc {
+    color: var(--color-red);
+}
