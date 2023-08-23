@@ -1,8 +1,8 @@
 # Obsidian Time Counter
 
-> This plugin is not OPEN SOURCE
-> It has basic features for free, but you need to pay for advanced features.
-> If you ever buy me a coffee, you can get a free license.
+> This plugin is not OPEN SOURCE<br>
+> It has basic features for free, but you need to pay for advanced features.<br>
+> If you ever buy me a coffee, you can get a free license.<br>
 > If you want to buy a license, please contact me by email: bonopengate@gmail.com
 
 ![img.png](img.png)
